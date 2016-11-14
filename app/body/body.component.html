@@ -1,0 +1,25 @@
+<hr>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-7">
+    <input [(ngModel)]="cityName" class="form-control">
+  </div>
+  <div class="col-sm-5">
+    <button class="btn-primary btn-block form-control" (click)="addCity()">Add City</button>
+  </div>
+</div>
+</div>
+<div style="padding: 8px">
+  <div class="card-columns">
+   <div class="card" *ngFor='let city of weatherData' >
+      <div class="card-block">
+        <h4 class="card-title">{{city.cityName}}</h4>
+      </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Temperature: {{city.temperature}}</li>
+      <li class="list-group-item">Sky is {{city.skyCondition}}</li>
+      <li class="list-group-item">Humidity: {{city.humidityInPercent}}</li>
+    </ul>
+   </div>
+  </div>
+</div>
