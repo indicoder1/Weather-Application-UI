@@ -15,4 +15,8 @@ export class BodyComponent{
       .subscribe(iWeatherData => this.weatherData.push(iWeatherData),
                  error=> this.errorMessage=<any>error);
   }
+
+  closeTile(closedCityName: string): void{
+    this.weatherData = this.weatherData.filter((cityData) => cityData.cityName !== closedCityName);
+  }
 }
