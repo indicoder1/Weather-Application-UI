@@ -13,6 +13,7 @@
   <div class="card-columns">
    <div class="card" *ngFor='let city of weatherData' >
       <div class="card-block">
+        <button (click)="closeTile(city.cityName)" class="btn btn-outline-danger btn-sm float-sm-right text-sm-center">x</button>
         <h4 class="card-title">{{city.cityName}}</h4>
       </div>
     <ul class="list-group list-group-flush">
